@@ -1,0 +1,7 @@
+.list-group-item {
+  padding: 6px 12px;
+  text-decoration: none;
+  margin-right: 50px;
+  border-radius: 4px;
+  border: 2px solid salmon;
+}
