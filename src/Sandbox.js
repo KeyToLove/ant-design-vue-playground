@@ -24,7 +24,7 @@ const Sandbox = ({ path }) => {
         showConsoleButton: true,
         showInlineErrors: true,
         editorHeight: '100vh',
-        // Comment the following `codeEditor` config ,every things will be ok
+        // The below `codeEditor` config casue the problem and make editor not editable, Comment these code ,every things will be ok
         // codeEditor: {
         //   extensions: [autocompletion()],
         //   completionKeymap: completionKeymap,
