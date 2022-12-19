@@ -1,5 +1,6 @@
 import React from 'react'
 import { Sandpack } from '@codesandbox/sandpack-react'
+import { autocompletion, completionKeymap } from '@codemirror/autocomplete'
 
 const initCode = `import { createApp } from 'vue'
 import Antd from 'ant-design-vue';
@@ -9,7 +10,7 @@ const app = createApp(App)
 app.use(Antd).mount('#app')
 `
 
-const Playground = ({ path }) => {
+const Sandbox = ({ path }) => {
   const fileConfig = require('./' + path)
   return (
     <Sandpack
@@ -23,6 +24,11 @@ const Playground = ({ path }) => {
         showConsoleButton: true,
         showInlineErrors: true,
         editorHeight: '100vh',
+        // Comment the following `codeEditor` config ,every things will be ok
+        // codeEditor: {
+        //   extensions: [autocompletion()],
+        //   completionKeymap: completionKeymap,
+        // },
       }}
       customSetup={{
         entry: '/index.js',
@@ -36,4 +42,4 @@ const Playground = ({ path }) => {
   )
 }
 
-export default Playground
+export default Sandbox
